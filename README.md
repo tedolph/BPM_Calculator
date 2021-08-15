@@ -12,8 +12,8 @@ At the moment, to get the most accurate BPM result, the video should be a stable
 
 The framework, FFMPEG, is used to retrieve the data of the video. The command
 
-'''
+```
 ./ffprobe -v error -hide_banner -select_streams v:0 -show_frames -print_format json INSERT_YOUR_VID_HERE.mov > original.json
-'''
+```
 
 ### JAVA
