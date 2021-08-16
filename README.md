@@ -29,7 +29,7 @@ The framework, FFMPEG, is used to retrieve information on each frame of the give
 
 ### JAVA
 
-The Java program is used to calculate the BPM of the video. This can be done by using the data extracted by the ffprobe command. The Java program accesses the outputted JSON file from the ffprobe command. Then the program accesses the variable, ```"pkt_size`"``. This variable is what visualizes the flashing light because it creates a perfect graph that shows the peaks each time the light turns on and off. An int array ```number``` is made that includes all the values from ```pkt_size```. Then in the function, calculateBeatPerMin, the peaks are determined. With the peaks found the time between each peak is calculated. Finally, the time between each peak is multiplied by the ```pkt_duration_time``` and 60. 
+The Java program is used to calculate the BPM of the video. This can be done by using the data extracted by the ffprobe command. The Java program accesses the outputted JSON file from the ffprobe command. Then the program accesses the variable, ```"pkt_size"```. This variable is what visualizes the flashing light because it creates a perfect graph that shows the peaks each time the light turns on and off. An int array ```number``` is made that includes all the values from ```"pkt_size"```. Then in the function, calculateBeatPerMin, the peaks are determined. With the peaks found the time between each peak is calculated. Finally, the time between each peak is multiplied by the ```"pkt_duration_time"``` and 60. 
 
 ```"pkt_size" ``` A variable in the JSON file that reads the size of each packet.
 
