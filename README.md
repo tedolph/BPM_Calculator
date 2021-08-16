@@ -16,4 +16,15 @@ The framework, FFMPEG, is used to retrieve the data of the video. The command
 ./ffprobe -v error -hide_banner -select_streams v:0 -show_frames -print_format json INSERT_YOUR_VID_HERE.mov > original.json
 ```
 
+``` -v ``` ????
+
+```-hide_banner ``` hide printing information related to te commandline
+
+```-select_streams v:0``` Shows ony video streams
+
+```print_format json``` outputs the information in JSON format
+
+
+
+
 ### JAVA
