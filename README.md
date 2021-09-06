@@ -1,8 +1,8 @@
 # BPM_Calculator :notes: :abacus:	
-Reads data from a video that includes a flashing light and determines the BPM of that flashing light.
+Reads data from a video that includes a flashing light and determines the Beats Per Minute (BPM) of that flashing light.
 
 # THE GOAL :goal_net:	
-The goal of this project was to have a video that includes a flashing light. Then the program calculates the beats-per-minute of the flashing. This allows the user to then search on a [song BPM database](https://getsongbpm.com/) and sync their video to the music. Technology filters are becoming easier for any person to use. On social media apps, people can easily edit videos to include complex filters and transitions that, just a few years ago, would seem impossible. A program that automatically syncs music to the video is useful to the everyday user since it is more efficient than searching through numerous songs to find one that looks correct.
+The goal of this project was to have a video that includes a flashing light. Then the program calculates the BPM of the flashing. This allows the user to then search on a [song BPM database](https://getsongbpm.com/) and sync their video to the music. Technology filters are becoming easier for any person to use. On social media apps, people can easily edit videos to include complex filters and transitions that, just a few years ago, would seem impossible. A program that automatically syncs music to the video is useful to the everyday user since it is more efficient than searching through numerous songs to find one that looks correct.
 
 # THE PARTS :books:	
 ### VIDEO
@@ -24,7 +24,7 @@ The framework, FFMPEG, is used to retrieve information on each frame of the give
 
 ### JAVA
 
-The Java program is used to calculate the BPM of the video. This can be done by using the data extracted by the ffprobe command. The Java program accesses the outputted JSON file from the ffprobe command. Then the program accesses the variable, ```"pkt_size"```. This variable is what visualizes the flashing light because it creates a perfect graph that shows the peaks each time the light turns on and off. An int array ```number``` is made that includes all the values from ```"pkt_size"```. Then in the function, calculateBeatPerMin, the peaks are determined. With the peaks found the time between each peak is calculated. Finally, the time between each peak is multiplied by the ```"pkt_duration_time"``` and 60. 
+The Java program is used to calculate the BPM of the video. This can be done by using the data extracted by the ffprobe command. The Java program accesses the outputted JSON file from the ffprobe command. Then the program accesses the field, ```"pkt_size"```. This field is what visualizes the flashing light because it creates a perfect graph that shows the peaks each time the light turns on and off. An int array ```number``` is made that includes all the values from ```"pkt_size"```. Then in the function, calculateBeatPerMin, the peaks are determined. With the peaks found the time between each peak is calculated. Finally, the time between each peak is multiplied by the ```"pkt_duration_time"``` and 60. 
 
 ```"pkt_size"``` A variable in the JSON file that reads the size of each packet.
 
